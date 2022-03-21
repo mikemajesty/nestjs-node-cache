@@ -1,0 +1,39 @@
+{
+  "name": "nestjs-node-cache",
+  "version": "0.0.5",
+  "description": "nestjs-node-cache",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "commit": "cz",
+    "test": "jest"
+  },
+  "author": "Mike Lima <mike.rodrigues.lima@gmail.com>",
+  "homepage": "https://github.com/mikemajesty/nestjs-node-cache#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikemajesty/nestjs-node-cache.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@nestjs/common": "^8.2.3",
+    "@nestjs/testing": "^8.2.3",
+    "rxjs": "^7.4.0"
+  },
+  "bugs": {
+    "url": "https://github.com/mikemajesty/nestjs-node-cache/issues"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "cz-conventional-changelog": "3.3.0",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.3",
+    "@commitlint/config-conventional": "^14.1.0",
+    "typescript": "^4.6.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
