@@ -8,6 +8,7 @@ export default {
     '^.+\\.ts$': 'ts-jest',
   },
   coveragePathIgnorePatterns: ['dist', 'node_modules', 'coverage'],
+  setupFilesAfterEnv: ['./tests/init.ts'],
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
   testEnvironment: 'node'
 };
