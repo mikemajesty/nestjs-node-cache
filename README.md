@@ -13,33 +13,35 @@ $ npm i nestjs-node-cache
           ├── service.ts
 ```
  - import CacheModule in your module
-```ts
-    <!-- module.ts -->
-    import { CacheModule } from 'nestjs-node-cache';
 
-    @Module({
-      imports: [CacheModule],
-      providers: [],
-      exports: [],
-    })
-    export class YourModule {}
-```
- - import service abstraction
-   ```ts
-     <!-- service.ts -->
-     import { ICacheService } from '../cache/adpater'
-     
-     @Injectable()
-     export class YourService implements IStatusService {
-       constructor(private readonly cacheService: ICacheService) {}
+    ```ts
+        <!-- module.ts -->
+        import { CacheModule } from 'nestjs-node-cache';
 
-        async example(marcaOrigem: string): Promise<string> {
-          const cache = this.cacheService.mGet(['KEY'])
+        @Module({
+          imports: [CacheModule],
+          providers: [],
+          exports: [],
+        })
+        export class YourModule {}
+    ```
+ - import ICacheService in your service
 
-          return cache
-        }
-     }
-   ```
+    ```ts
+      <!-- service.ts -->
+      import { ICacheService } from '../cache/adpater'
+      
+      @Injectable()
+      export class YourService implements IStatusService {
+        constructor(private readonly cacheService: ICacheService) {}
+
+          async example(marcaOrigem: string): Promise<string> {
+            const cache = this.cacheService.mGet(['KEY'])
+
+            return cache
+          }
+      }
+    ```
 
 # operators
 
