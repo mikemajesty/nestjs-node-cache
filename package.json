@@ -1,8 +1,8 @@
 {
   "name": "nestjs-node-cache",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "nestjs-node-cache",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "commit": "cz",
