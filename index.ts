@@ -1,7 +1,2 @@
-import { CacheModule } from './src/cache/module';
-import { ICacheService } from './src/cache/adpater';
-
-export {
-  CacheModule,
-  ICacheService
-}
+export { CacheModule } from './src/cache/module';
+export { ICacheService } from './src/cache/adpater';

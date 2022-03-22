@@ -1,6 +1,6 @@
 {
   "name": "nestjs-node-cache",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "nestjs-node-cache",
   "main": "dist/index.js",
   "scripts": {
