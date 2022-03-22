@@ -1,8 +1,2 @@
-const { CacheModule } = require('./src/cache/module');
-const { ICacheService } = require('./src/cache/adpater');
-
-
-module.exports = {
-  CacheModule,
-  ICacheService
-}
+export { CacheModule } from './src/cache/module';
+export { ICacheService } from './src/cache/adpater';

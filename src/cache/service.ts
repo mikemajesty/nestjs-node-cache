@@ -5,7 +5,6 @@ import { CacheType, ICacheService } from './adpater'
 export class CacheService implements ICacheService {
   nodeCache!: NodeCache;
   connect(config?: NodeCache.Options): CacheService {
-    console.log('nodeCache', NodeCache);
     this.nodeCache = new NodeCache(config || { stdTTL: 3600, checkperiod: 3600 })
     return this
   }
