@@ -6,42 +6,32 @@ $ npm i nestjs-node-cache
 
 ## Usage
 
-```bash
-  ├── cats
-          ├── controller.ts
-          ├── module.ts
-          ├── service.ts
+---
+```ts
+    import { CacheModule } from 'nestjs-node-cache';
+
+    @Module({
+      imports: [CacheModule],
+      providers: [],
+      exports: [],
+    })
+    export class YourModule {}
 ```
- - import CacheModule in your module
 
-    ```ts
-        <!-- module.ts -->
-        import { CacheModule } from 'nestjs-node-cache';
+```ts
+  import { ICacheService } from 'nestjs-node-cache'
+  
+  @Injectable()
+  export class YourService {
+    constructor(private readonly cacheService: ICacheService) {}
 
-        @Module({
-          imports: [CacheModule],
-          providers: [],
-          exports: [],
-        })
-        export class YourModule {}
-    ```
- - import ICacheService in your service
+      async method(): string {
+        this.cacheService.set('KEY', 'textCached');
 
-    ```ts
-      <!-- service.ts -->
-      import { ICacheService } from '../cache/adpater'
-      
-      @Injectable()
-      export class YourService implements IStatusService {
-        constructor(private readonly cacheService: ICacheService) {}
-
-          async example(marcaOrigem: string): Promise<string> {
-            const cache = this.cacheService.mGet(['KEY'])
-
-            return cache
-          }
+        return this.cacheService.get('KEY')
       }
-    ```
+  }
+```
 
 # operators
 
@@ -56,8 +46,8 @@ $ npm i nestjs-node-cache
   get(key: string | number): unknown
   setExpiration(key: string | number, ttl: number): boolean
   setOptions(options: NodeCache.Options): void
-
 ```
+
 ---
 
 The following is a list of all the people that have contributed to nestjs-node-cache. Thanks for your contributions!
