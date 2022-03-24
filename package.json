@@ -1,12 +1,12 @@
 {
   "name": "nestjs-node-cache",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "nestjs-node-cache",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "commit": "cz",
-    "test": "jest --config=\"./tests/jest.config.ts\" --all"
+    "test": "jest --config=\"./tests/jest.ts\" --all"
   },
   "author": "Mike Lima <mike.rodrigues.lima@gmail.com>",
   "homepage": "https://github.com/mikemajesty/nestjs-node-cache#readme",
